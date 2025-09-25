@@ -14,7 +14,7 @@ public class ProductRepository(StoreContext context) : IProductRepository
 
         if (!string.IsNullOrWhiteSpace(brand))
         {
-            query = query.Where(p => p.Brand == brand);
+            query = query.Where(p => p.Brand == brand); //vraca sve proizvode sa brendom koji smo zadali ukoliko postoje
         }
 
         if (!string.IsNullOrWhiteSpace(type))
